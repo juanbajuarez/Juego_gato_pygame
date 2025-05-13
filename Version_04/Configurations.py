@@ -6,28 +6,28 @@ class Configurations:
     Clase que contiene todas las configuraciones del juego
     """
     #Configuraciones de la pantalla
-    _screen_size = (1280, 720)            # Alto por ancho
-    _game_title = "Juego del gato"  #Título del juego
-    _background = (255, 100, 50)          #Fondo de la pantalla en RGB
+    _screen_size = (1280, 720)              # Alto por ancho
+    _game_title = "Juego del gato"          #Título del juego
+    _background = (255, 100, 50)            #Fondo de la pantalla en RGB
     _fps = 8
 
     # Rutas de las imágenes utilizadas para las clases Background, SnakeBlock y Apple.
     _background_image_path = "../Media/background_image.png"
 
-    #Métodos de acceso
 
+    # Métodos de acceso
     @classmethod
     def get_screen_size(cls)->tuple[int,int]:
         """
         Getter para _screen_size
-        :return:
+        :return: una tupla
         """
         return cls._screen_size
     @classmethod
     def get_game_title(cls)->str:
         """
         Getter para _game_title
-        :return:
+        :return: una cadena
         """
         return cls._game_title
 
