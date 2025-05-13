@@ -4,7 +4,7 @@
 
 import pygame
 from Configurations import Configurations
-#Hola
+#Ho
 class Background:
 
     """
