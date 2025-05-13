@@ -6,10 +6,12 @@ import pygame
 from Configurations import Configurations
 from Game_functionalities import game_event,screen_refresh
 from Media import Background
+
+
+
 def run_game()->None:
     """
     Función principal.
-    :return:Nada.
     """
     #Inicia modulo pygame
     pygame.init()
