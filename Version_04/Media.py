@@ -1,6 +1,6 @@
 #Juan Y Jamileth
 # Fecha: Mayo de 2025
-# Descripción: version 3 Juego del gato
+# Descripción: version 4 Juego del gato
 
 import pygame
 from Configurations import Configurations

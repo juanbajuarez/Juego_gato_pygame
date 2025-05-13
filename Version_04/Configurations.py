@@ -1,6 +1,6 @@
 # Juan Y Jamileth
 # Fecha: Mayo de 2025
-# Descripción: version 3 Juego del gato
+# Descripción: version 4 Juego del gato
 class Configurations:
     """
     Clase que contiene todas las configuraciones del juego
