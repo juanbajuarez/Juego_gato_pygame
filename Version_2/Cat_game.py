@@ -1,45 +1,32 @@
 #Juan Y Jamileth
-
 # Fecha: Mayo de 2025
 # Descripción: version 2 Juego del gato
 
 import pygame
-
+from Configurations import Configurations
+from Game_functionalities import game_event,screen_refresh
 def run_game()->None:
     """
-    Función principal
-    :return:
+    Función principal.
+    :return:Nada.
     """
     #Inicia modulo pygame
     pygame.init()
 
     #Se inicializa la pantalla
-    screen_size=(1280,720) #Alto por ancho
-    screen=pygame.display.set_mode(screen_size)
-
-    #Título del juego
-    game_title="Juego del gato"
-    pygame.display.set_caption(game_title)
+    screen=pygame.display.set_mode(Configurations.get_screen_size())
+    pygame.display.set_caption(Configurations.get_game_title())
 
     #Ciclo principal del juego
 
     game_over=False
 
     while not game_over:
-        # Se verifican los eventos(teclado y ratón) del juego
-        for event in pygame.event.get():
-            #Un clic en cerrar el juego
-            if event.type==pygame.QUIT:
-                game_over=True
-        #Se dibuja los elementos gráficos em la pantalla
-        background=(255,100,50)#Fondo de la pantalla en RGB
-        screen.fill(background)
-
-        #Se actualiza la pantalla
-        pygame.display.flip()
-    #Se cierran los recursos del juego
+        game_over = game_event()
+        # Se dibuja los elementos gráficos en la pantalla
+        screen_refresh(screen)
+        # Se cierran los recursos del juego
     pygame.quit()
-
 
 if __name__ == '__main__':
     run_game()
