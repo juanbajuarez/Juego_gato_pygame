@@ -2,9 +2,7 @@
 # Fecha: Mayo de 2025
 # Descripción: version 4 Juego del gato
 class Configurations:
-    """
-    Clase que contiene todas las configuraciones del juego
-    """
+    """ Clase que contiene todas las configuraciones del juego """
     #Configuraciones de la pantalla
     _screen_size = (1280, 720)              # Alto por ancho
     _game_title = "Juego del gato"          #Título del juego

@@ -4,7 +4,7 @@
 
 import pygame
 from Configurations import Configurations
-from Version_03.Media import Background
+from Media import Background
 
 
 def game_event()->bool:

@@ -4,7 +4,6 @@
 
 import pygame
 from Configurations import Configurations
-#Holi
 class Background:
 
     """
