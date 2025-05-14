@@ -7,7 +7,7 @@ from Configurations import Configurations
 
 class TicTacToeMark(pygame.sprite.Sprite):
     """
-    Clase que representa una marca (❌ o ⭕) en el tablero.
+    Clase que representa una marca en el tablero.
     Hereda de Sprite.
     """
 
@@ -21,6 +21,8 @@ class TicTacToeMark(pygame.sprite.Sprite):
         :param cell_number: número de la casilla (1 a 9)
         """
         super().__init__()
+        self._cell_number = cell_number
+
 
         # Determinar imagen según el turno actual
         if TicTacToeMark.turn == 'X':
@@ -37,3 +39,9 @@ class TicTacToeMark(pygame.sprite.Sprite):
 
         # Posicionar marca en el lugar correcto
         self.rect.center = Configurations.get_cell_position(cell_number)
+
+
+
+    def get_cell_number(self) -> int:
+        return self._cell_number
+

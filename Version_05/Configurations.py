@@ -9,9 +9,13 @@ class Configurations:
     _background = (255, 100, 50)            #Fondo de la pantalla en RGB
     _fps = 8
 
-    # Rutas de las imágenes utilizadas para las clases Background, SnakeBlock y Apple.
-
+    # Rutas de las imágenes utilizadas para las clases Background, mark0 y markx.
     _background_image_path = "../Media/background_image.png"
+    _mark_x_path = "../Media/markX.png"
+    _mark_o_path = "../Media/markO.png"
+
+    _mark_x_turn_path = "../Media/turnX.png"
+    _mark_o_turn_path = "../Media/turnO.png"
 
     _mark_size = (100, 100)
     # Agregando las celdas.
@@ -29,55 +33,38 @@ class Configurations:
         9:(775, 570)
     }
 
-    _mark_x_path = "../Media/markX.png"
-    _mark_o_path = "../Media/markO.png"
+
 
     # Métodos de acceso
     @classmethod
     def get_screen_size(cls)->tuple[int,int]:
-        """
-        Getter para _screen_size
-        :return: una tupla
-        """
+        """Getter para _screen_size"""
         return cls._screen_size
 
     @classmethod
     def get_mark_size(cls) -> tuple[int, int]:
-        """
-        Getter para _mark_size
-        :return: una tupla
-        """
+        """Getter para _mark_size"""
         return cls._mark_size
 
 
     @classmethod
     def get_game_title(cls)->str:
-        """
-        Getter para _game_title
-        :return: una cadena
-        """
+        """Getter para _game_title"""
         return cls._game_title
 
     @classmethod
     def get_background(cls) -> tuple[int,int,int]:
-        """
-        Getter para _background
-        :return:
-        """
+        """Getter para _background"""
         return cls._background
 
     @classmethod
     def get_background_image_path(cls) -> str:
-        """
-        Getter para _background_image_path.
-        """
+        """Getter para _background_image_path."""
         return cls._background_image_path
 
     @classmethod
     def get_fps(cls) -> int:
-        """
-        Getter para _fps.
-        """
+        """Getter para _fps."""
         return cls._fps
 
     @classmethod
@@ -97,4 +84,11 @@ class Configurations:
     def get_mark_o_path(cls) -> str:
         return cls._mark_o_path
 
+    @classmethod
+    def get_mark_x_turn_path(cls) -> str:
+        return cls._mark_x_turn_path
+
+    @classmethod
+    def get_mark_0_turn_path(cls) -> str:
+        return cls._mark_x_turn_path
 
