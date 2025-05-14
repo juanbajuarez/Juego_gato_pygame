@@ -8,6 +8,7 @@ from Game_functionalities import game_event,screen_refresh
 from Media import Background
 from pygame.sprite import Group
 
+from Version_04.Media import TurnImage
 
 
 def run_game()->None:
@@ -25,14 +26,17 @@ def run_game()->None:
     background=Background()
     #Ciclo principal del juego
 
+    #Se crea el objeto de marcador.
     marks = Group()
+
+    turn_image = TurnImage()
 
     game_over=False
 
     while not game_over:
-        game_over = game_event(marks)
+        game_over = game_event(marks, turn_image)
         # Se dibuja los elementos gráficos en la pantalla
-        screen_refresh(screen,clock,background, marks)
+        screen_refresh(screen,clock,background, marks, turn_image)
         # Se cierran los recursos del juego
     pygame.quit()
 
