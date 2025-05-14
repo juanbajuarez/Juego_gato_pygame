@@ -10,8 +10,25 @@ class Configurations:
     _fps = 8
 
     # Rutas de las imágenes utilizadas para las clases Background, SnakeBlock y Apple.
+
     _background_image_path = "../Media/background_image.png"
 
+    _mark_size = (150, 150)
+    # Agregando las celdas.
+    _cell_positions = {
+        1:(150, 100),
+        2:(590, 100),
+        3:(1030, 100),
+        4:(150, 310),
+        5:(590, 310),
+        6:(1030, 310),
+        7:(150, 520),
+        8:(590, 520),
+        9:(1030, 520)
+    }
+
+    _mark_x_path = "../Media/markX.png"
+    _mark_o_path = "../Media/markO.png"
 
     # Métodos de acceso
     @classmethod
@@ -21,6 +38,16 @@ class Configurations:
         :return: una tupla
         """
         return cls._screen_size
+
+    @classmethod
+    def get_mark_size(cls) -> tuple[int, int]:
+        """
+        Getter para _mark_size
+        :return: una tupla
+        """
+        return cls._mark_size
+
+
     @classmethod
     def get_game_title(cls)->str:
         """
@@ -50,3 +77,21 @@ class Configurations:
         Getter para _fps.
         """
         return cls._fps
+
+    @classmethod
+    def get_cell_position(cls, cell_number: int) -> tuple[int, int]:
+        """
+        Getter para la posición de una celda específica.
+        :param cell_number: número de la casilla (1 a 9)
+        :return: tupla con coordenadas (x, y)
+        """
+        return cls._cell_positions.get(cell_number, (0, 0))
+
+    @classmethod
+    def get_mark_x_path(cls) -> str:
+        return cls._mark_x_path
+
+    @classmethod
+    def get_mark_o_path(cls) -> str:
+        return cls._mark_o_path
+
