@@ -17,13 +17,13 @@ def game_event(marks: pygame.sprite.Group)->bool:
     # Se verifican los eventos(teclado y ratón) del juego
     for event in pygame.event.get():
         # Un clic en cerrar el juego
-        if event.type == pygame.QUIT:
-            game_over = True
+        if event.type == pygame.QUIT: game_over = True
         elif event.type == pygame.KEYDOWN:
+            # llaves de celda para obtener la posición según la letra que se presione.
             key_to_cell = {
-                pygame.K_q: 1, pygame.K_w: 2, pygame.K_e: 3,
-                pygame.K_a: 4, pygame.K_s: 5, pygame.K_d: 6,
-                pygame.K_z: 7, pygame.K_x: 8, pygame.K_c: 9,
+                pygame.K_q:1,pygame.K_w:2,pygame.K_e:3,
+                pygame.K_a:4,pygame.K_s:5,pygame.K_d:6,
+                pygame.K_z:7,pygame.K_x:8,pygame.K_c:9,
             }
             if event.key in key_to_cell:
                 new_mark = TicTacToeMark(key_to_cell[event.key])
@@ -40,6 +40,7 @@ def screen_refresh(screen: pygame.surface.Surface,clock: pygame.time.Clock,
     # Se dibuja el fondo de la pantalla
     background.blit(screen)
 
+    # Dibujar la marca sobre la pantalla
     marks.draw(screen)
 
     # Se actualiza la pantalla
