@@ -36,18 +36,41 @@ class TurnImage(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.image_x = pygame.image.load(Configurations.get_mark_x_turn_path())
-        self.image_o = pygame.image.load(Configurations.get_mark_0_turn_path())
+        self.image_o = pygame.image.load(Configurations.get_mark_o_turn_path())
 
-        self.image_x = pygame.transform.scale(self.image_x, (100, 100))
-        self.image_o = pygame.transform.scale(self.image_o, (100, 100))
+        self.image_x = pygame.transform.scale(self.image_x, Configurations.get_mark_turn_image_size())
+        self.image_o = pygame.transform.scale(self.image_o, Configurations.get_mark_turn_image_size())
 
         self.image = self.image_x
         self.rect = self.image.get_rect()
         self.rect.topleft = (20, 20)
 
     def change_turn(self, current_player: str) -> None:
-        if current_player == "❌":
-            self.image = self.image_o
+        if current_player == "X": self.image = self.image_o
+        else: self.image = self.image_x
+
+class ResultsImage:
+    def __init__(self, result: str):
+        if result == 'X':
+            path = Configurations.get_win_x_path()
+        elif result == 'O':
+            path = Configurations.get_win_o_path()
         else:
-            self.image = self.image_x
+            path = Configurations.get_draw_path()
+
+        self.image = pygame.image.load(path)
+        self.image = pygame.transform.scale(self.image, (400, 400))
+        self.rect = self.image.get_rect()
+        self.rect.center = (640, 360)
+
+
+class CreditsImage:
+    def __init__(self):
+        path = Configurations.get_draw_path()
+        self.image = pygame.image.load(path)
+        self.image = pygame.transform.scale(self.image, (400, 100))
+        self.rect = self.image.get_rect()
+        self.rect.center = (640, 650)
+
+
 
