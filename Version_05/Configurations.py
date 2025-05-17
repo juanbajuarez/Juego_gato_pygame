@@ -1,6 +1,7 @@
 # Juan Y Jamileth
 # Fecha: Mayo de 2025
 # Descripción: version 4 Juego del gato
+
 class Configurations:
     """ Clase que contiene todas las configuraciones del juego """
     #Configuraciones de la pantalla
@@ -14,10 +15,18 @@ class Configurations:
     _mark_x_path = "../Media/markX.png"
     _mark_o_path = "../Media/markO.png"
 
+    #Marcadores de jugadores
     _mark_x_turn_path = "../Media/turnX.png"
     _mark_o_turn_path = "../Media/turnO.png"
 
     _mark_size = (100, 100)
+    _mark_turn_image_size = (400, 200)
+
+    _mark_win_x_path = "../Media/winX.png"
+    _mark_win_o_path = "../Media/winO.png"
+    _mark_draw_path = "../Media/draw.png"
+    _credits_image_path = "../Media/draw.png"
+
     # Agregando las celdas.
     _cell_positions = {
         1:(500, 310),
@@ -45,6 +54,11 @@ class Configurations:
     def get_mark_size(cls) -> tuple[int, int]:
         """Getter para _mark_size"""
         return cls._mark_size
+
+    @classmethod
+    def get_mark_turn_image_size(cls) -> tuple[int, int]:
+        """Getter para _mark_turn_image_size"""
+        return cls._mark_turn_image_size
 
 
     @classmethod
@@ -89,6 +103,39 @@ class Configurations:
         return cls._mark_x_turn_path
 
     @classmethod
-    def get_mark_0_turn_path(cls) -> str:
-        return cls._mark_x_turn_path
+    def get_mark_o_turn_path(cls) -> str:
+        return cls._mark_o_turn_path
+
+    @classmethod
+    def get_win_x_path(cls):
+        return cls._mark_win_x_path
+
+    @classmethod
+    def get_win_o_path(cls):
+        return cls._mark_win_o_path
+
+    @classmethod
+    def get_draw_path(cls):
+        return cls._mark_draw_path
+
+    @classmethod
+    def get_credits_image_path(cls):
+        return cls._credits_image_path
+
+
+class ResultsImage:
+    def __init__(self, result: str):
+        if result == 'X':
+            path = Configurations.get_win_x_path()
+        elif result == 'O':
+            path = Configurations.get_win_o_path()
+        else:
+            path = Configurations.get_draw_path()
+
+        self.image = pygame.image.load(path)
+        self.image = pygame.transform.scale(self.image, (400, 400))
+        self.rect = self.image.get_rect()
+        self.rect.center = (640, 360)
+
+
 
