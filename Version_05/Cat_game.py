@@ -8,7 +8,7 @@ from Game_functionalities import game_event,screen_refresh
 from Media import Background
 from pygame.sprite import Group
 
-from Version_04.Media import TurnImage
+from Media import TurnImage
 
 
 def run_game()->None:
