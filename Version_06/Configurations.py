@@ -1,6 +1,6 @@
 # Juan Y Jamileth
 # Fecha: Mayo de 2025
-# Descripción: version 5 Juego del gato
+# Descripción: version 6 Juego del gato
 
 import pygame
 
@@ -9,7 +9,6 @@ class Configurations:
     #Configuraciones de la pantalla
     _screen_size = (1280, 720)              # Alto por ancho
     _game_title = "Juego del gato"          #Título del juego
-    _background = (255, 100, 50)            #Fondo de la pantalla en RGB
     _fps = 8
 
     # Rutas de las imágenes utilizadas para las clases Background, mark0 y markx.
@@ -27,7 +26,7 @@ class Configurations:
     _mark_win_x_path = "../Media/winX.png"
     _mark_win_o_path = "../Media/winO.png"
     _mark_draw_path = "../Media/draw.png"
-    _credits_image_path = "../Media/draw.png"
+    _credits_image_path = "../Media/credits.png"
 
     # Agregando las celdas.
     _cell_positions = {

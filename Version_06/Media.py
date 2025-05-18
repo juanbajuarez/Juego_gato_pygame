@@ -1,6 +1,6 @@
 #Juan Y Jamileth
 # Fecha: Mayo de 2025
-# Descripción: version 5 Juego del gato
+# Descripción: version 6 Juego del gato
 
 import pygame
 from Configurations import Configurations
@@ -43,13 +43,36 @@ class TurnImage(pygame.sprite.Sprite):
 
         self.image = self.image_x
         self.rect = self.image.get_rect()
-        self.rect.topleft = (450,50)     # Se centra la imagen de turno
+        self.rect = (450,50)     # Se centra la imagen de turno
 
     def change_turn(self, current_player: str) -> None:
-        if current_player == "X": self.image = self.image_o
-        else: self.image = self.image_x
+        if current_player == "X":
+            self.image = self.image_x
+        else:
+            self.image = self.image_o
+
+class ResultsImage:
+    def __init__(self, result: str):
+        if result == 'X':
+            path = Configurations.get_win_x_path()
+        elif result == 'O':
+            path = Configurations.get_win_o_path()
+        else:
+            path = Configurations.get_draw_path()
+
+        self.image = pygame.image.load(path)
+        self.image = pygame.transform.scale(self.image, (400, 400))
+        self.rect = self.image.get_rect()
+        self.rect.center = (640, 360)
 
 
+class CreditsImage:
+    def __init__(self):
+        path = Configurations.get_credits_image_path()
+        self.image = pygame.image.load(path)
+        self.image = pygame.transform.scale(self.image, (400, 100))
+        self.rect = self.image.get_rect()
+        self.rect.center = (650, 650)
 
 
 

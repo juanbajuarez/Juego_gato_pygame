@@ -1,15 +1,12 @@
 #Juan Y Jamileth
 # Fecha: Mayo de 2025
-# Descripción: version 5 Juego del gato
+# Descripción: version 6 Juego del gato
 
 import pygame
 from Configurations import Configurations
-from Game_functionalities import game_event,screen_refresh
-from Media import Background
+from Game_functionalities import game_event,screen_refresh,check_winner,game_over_screen
+from Media import Background,TurnImage
 from pygame.sprite import Group
-
-from Media import TurnImage
-
 
 def run_game()->None:
     """
@@ -32,12 +29,16 @@ def run_game()->None:
     turn_image = TurnImage()
 
     game_over=False
+    result=''
 
     while not game_over:
-        game_over = game_event(marks, turn_image)
+        game_event(marks, turn_image)
         # Se dibuja los elementos gráficos en la pantalla
+        game_over,result=check_winner(marks)
         screen_refresh(screen,clock,background, marks, turn_image)
+
         # Se cierran los recursos del juego
+    game_over_screen(screen, clock, background, marks, turn_image, result)
     pygame.quit()
 
 if __name__ == '__main__':
