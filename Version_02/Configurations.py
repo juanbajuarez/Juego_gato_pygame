@@ -1,6 +1,8 @@
-# Juan Y Jamileth
+# bits & bytes
 # Fecha: Mayo de 2025
-# Descripción: version 2 Juego del gato
+# Descripción: version 02 Juego del gato
+# Configuraciones del juego
+
 class Configurations:
     """
     Clase que contiene todas las configuraciones del juego
@@ -11,7 +13,6 @@ class Configurations:
     _background = (255, 100, 50)          #Fondo de la pantalla en RGB
 
     #Métodos de acceso
-
     @classmethod
     def get_screen_size(cls)->tuple[int,int]:
         """
@@ -31,6 +32,6 @@ class Configurations:
     def get_background(cls) -> tuple[int,int,int]:
         """
         Getter para _background
-        :return:
+        return:
         """
         return cls._background

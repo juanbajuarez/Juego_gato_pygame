@@ -1,4 +1,4 @@
-#Juan Y Jamileth
+# bits & bytes
 # Fecha: Mayo de 2025
 # Descripción: version 03 Juego del gato
 
@@ -6,6 +6,7 @@ import pygame
 from Configurations import Configurations
 from Game_functionalities import game_event,screen_refresh
 from Media import Background
+
 def run_game()->None:
     """
     Función principal.
@@ -31,5 +32,6 @@ def run_game()->None:
         # Se cierran los recursos del juego
     pygame.quit()
 
+#Código a nivel módulo.
 if __name__ == '__main__':
     run_game()

@@ -1,10 +1,11 @@
-#Juan Y Jamileth
+# bits & bytes
 # Fecha: Mayo de 2025
-# Descripción: version 3 Juego del gato
+# Descripción: version 03 Juego del gato
+# Funcionalidades del juego.
 
 import pygame
 from Configurations import Configurations
-from Version_03.Media import Background
+from Media import Background
 
 
 def game_event()->bool:

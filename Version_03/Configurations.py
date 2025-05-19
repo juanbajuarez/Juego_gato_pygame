@@ -1,6 +1,8 @@
-# Juan Y Jamileth
+# bits & bytes
 # Fecha: Mayo de 2025
 # Descripción: version 3 Juego del gato
+# Configuraciones del juego.
+
 class Configurations:
     """
     Clase que contiene todas las configuraciones del juego

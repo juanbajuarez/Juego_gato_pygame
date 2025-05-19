@@ -1,6 +1,7 @@
-#Juan Y Jamileth
+# # bits & bytes
 # Fecha: Mayo de 2025
-# Descripción: version 3 Juego del gato
+# Descripción: version 03 Juego del gato
+# Media del juego
 
 import pygame
 from Configurations import Configurations

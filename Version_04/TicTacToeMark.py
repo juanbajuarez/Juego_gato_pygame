@@ -1,6 +1,7 @@
-# Juan y Jamileth
+# bits & bytes
 # Fecha: Mayo de 2025
-# Descripción: Clase para las marcas del juego del gato
+# Descripción: version 04 Juego del gato
+# Clase para las marcas del juego del gato
 
 import pygame
 from Configurations import Configurations
@@ -18,7 +19,7 @@ class TicTacToeMark(pygame.sprite.Sprite):
         """
         Constructor que crea la marca según el turno actual
         y la posiciona en la casilla correspondiente.
-        :param cell_number: número de la casilla (1 a 9)
+        :param cell_number: Número de la casilla (1 a 9)
         """
         super().__init__()
 

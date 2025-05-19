@@ -1,13 +1,14 @@
-#Juan Y Jamileth
+# bits & bytes
 # Fecha: Mayo de 2025
-# Descripción: version 2 Juego del gato
+# Descripción: version 02 Juego del gato.
+# Funcionalidades del juego
 
 import pygame
 from Configurations import Configurations
 def game_event()->bool:
     """
     Función que administra los eventos del juego.
-    :return: La bandera del fin del juego
+    Return: La bandera del fin del juego.
     """
     game_over=False
     # Se verifican los eventos(teclado y ratón) del juego

@@ -1,6 +1,6 @@
-#Juan Y Jamileth
+# bits & bytes
 # Fecha: Mayo de 2025
-# Descripción: version 4 Juego del gato
+# Descripción: version 04 Juego del gato
 
 import pygame
 from Configurations import Configurations
@@ -36,5 +36,6 @@ def run_game()->None:
         # Se cierran los recursos del juego
     pygame.quit()
 
+#Código a nivel de módulo.
 if __name__ == '__main__':
     run_game()

@@ -1,6 +1,7 @@
-# Juan y Jamileth
+# bits & bytes
 # Fecha: Mayo de 2025
-# Descripción: Clase para las marcas del juego del gato
+# Descripción: version 05 Juego del gato
+# Clase para las marcas del juego del gato
 
 import pygame
 from Configurations import Configurations

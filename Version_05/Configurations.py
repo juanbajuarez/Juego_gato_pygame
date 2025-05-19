@@ -1,6 +1,6 @@
-# Juan Y Jamileth
+# bits & bytes
 # Fecha: Mayo de 2025
-# Descripción: version 5 Juego del gato
+# Descripción: version 05 Juego del gato
 
 import pygame
 
