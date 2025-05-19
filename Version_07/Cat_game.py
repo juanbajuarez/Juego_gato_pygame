@@ -1,6 +1,6 @@
-#Juan Y Jamileth
+# bits & bytes
 # Fecha: Mayo de 2025
-# Descripción: version 7 Juego del gato
+# Descripción: version 07 Juego del gato
 
 import pygame
 from Configurations import Configurations
@@ -45,5 +45,6 @@ def run_game()->None:
     game_over_screen(audio,screen, clock, background, marks, turn_image, result)
     pygame.quit()
 
+# Código a nivel de módulo.
 if __name__ == '__main__':
     run_game()

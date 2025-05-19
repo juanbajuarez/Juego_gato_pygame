@@ -1,6 +1,6 @@
-# Juan Y Jamileth
+# bits & bytes
 # Fecha: Mayo de 2025
-# Descripción: version 7 Juego del gato
+# Descripción: version 07 Juego del gato
 
 import pygame
 
@@ -102,45 +102,70 @@ class Configurations:
     def get_cell_position(cls, cell_number: int) -> tuple[int, int]:
         """
         Getter para la posición de una celda específica.
-        :param cell_number: número de la casilla (1 a 9)
+        :param cell_number: Número de la casilla (1 a 9)
         :return: tupla con coordenadas (x, y)
         """
         return cls._cell_positions.get(cell_number, (0, 0))
 
     @classmethod
     def get_mark_x_path(cls) -> str:
+        """
+        Getter para _mark_x_path.
+        """
         return cls._mark_x_path
 
     @classmethod
     def get_mark_o_path(cls) -> str:
+        """
+        Getter para _mark_o_path.
+        """
         return cls._mark_o_path
 
     @classmethod
     def get_mark_x_turn_path(cls) -> str:
+        """
+        Getter para _mark_x_turn_path.
+        """
         return cls._mark_x_turn_path
 
     @classmethod
     def get_mark_o_turn_path(cls) -> str:
+        """
+        Getter para _mark_o_turn_path.
+        """
         return cls._mark_o_turn_path
 
     @classmethod
     def get_win_x_path(cls):
+        """
+        Getter para _mark_win_x_path.
+        """
         return cls._mark_win_x_path
 
     @classmethod
     def get_win_o_path(cls):
+        """
+        Getter para _mark_win_o_path.
+        """
         return cls._mark_win_o_path
 
     @classmethod
     def get_draw_path(cls):
+        """
+        Getter para _mark_draw_path.
+        """
         return cls._mark_draw_path
 
     @classmethod
     def get_credits_image_path(cls):
+        """
+        Getter para _credits_image_path.
+        """
         return cls._credits_image_path
 
     @classmethod
     def get_music_volume(cls) -> float:
+
         """
         Getter para _music_volume.
         """
@@ -176,6 +201,9 @@ class Configurations:
 
 
 class ResultsImage:
+    """
+    Clase para mostrar los resultados del juego
+    """
     def __init__(self, result: str):
         if result == 'X':
             path = Configurations.get_win_x_path()
