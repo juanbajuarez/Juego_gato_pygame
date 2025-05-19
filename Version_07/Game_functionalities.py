@@ -120,10 +120,10 @@ def game_over_screen(audio:Audio,screen: pygame.surface.Surface,
         screen.blit(result_image.image, result_image.rect)
         screen.blit(credits.image, credits.rect)
         pygame.display.flip()
-        pygame.time.wait(500)
+        pygame.time.wait(Configurations.get_time_wait())
 
         # Oculta el resultado (pero mantiene fondo y marcas)
         screen_refresh(screen, clock, background, marks, turn_image)
         pygame.display.flip()
-        pygame.time.wait(500)
+        pygame.time.wait(Configurations.get_time_wait())
     pygame.time.wait(Configurations.get_game_over_screen_time())
