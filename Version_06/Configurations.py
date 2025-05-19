@@ -10,6 +10,12 @@ class Configurations:
     _screen_size = (1280, 720)              # Alto por ancho
     _game_title = "Juego del gato"          #Título del juego
     _fps = 8
+    _game_over_screen_time = 5
+    _screen_credist_size = (400, 100)
+    _position_credits = (650, 650)
+    _position_status = (640, 360)
+    _screen_status_size = (400, 400)
+    _screen_turn_size = (450, 50)
 
     # Rutas de las imágenes utilizadas para las clases Background, mark0 y markx.
     _background_image_path = "../Media/background_image.png"
@@ -42,10 +48,41 @@ class Configurations:
         8:(640, 570),
         9:(775, 570)
     }
-
+    _time_wait = 500
 
 
     # Métodos de acceso
+
+    @classmethod
+    def get_time_wait(cls) -> int:
+        """Getter para _time_wait."""
+        return cls._time_wait
+
+    @classmethod
+    def get_screen_turn_size(cls) -> tuple[int, int]:
+        """Getter para _screen_turn_size"""
+        return cls._screen_turn_size
+
+    @classmethod
+    def get_screen_status_size(cls) -> tuple[int, int]:
+        """Getter para _screen_status_size"""
+        return cls._screen_status_size
+
+    @classmethod
+    def get_screen_credist_size(cls) -> tuple[int, int]:
+        """Getter para _screen_credist_size"""
+        return cls._screen_credist_size
+
+    @classmethod
+    def get_position_status(cls) -> tuple[int, int]:
+        """Getter para _position_status"""
+        return cls._position_status
+
+    @classmethod
+    def get_position_credits(cls) -> tuple[int, int]:
+        """Getter para _position_credits"""
+        return cls._position_credits
+
     @classmethod
     def get_screen_size(cls)->tuple[int,int]:
         """Getter para _screen_size"""

@@ -43,7 +43,7 @@ class TurnImage(pygame.sprite.Sprite):
 
         self.image = self.image_x
         self.rect = self.image.get_rect()
-        self.rect.topleft = (450,50)     # Se centra la imagen de turno
+        self.rect.topleft = Configurations.get_screen_turn_size()     # Se centra la imagen de turno
 
     def change_turn(self, current_player: str) -> None:
         if current_player == "X": self.image = self.image_o

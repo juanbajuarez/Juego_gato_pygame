@@ -81,7 +81,6 @@ class Configurations:
         """Getter para _screen_turn_size"""
         return cls._screen_turn_size
 
-    # Métodos de acceso
     @classmethod
     def get_screen_status_size(cls)->tuple[int,int]:
         """Getter para _screen_status_size"""

@@ -11,6 +11,7 @@ class Configurations:
     _game_title = "Juego del gato"          #Título del juego
     _background = (255, 100, 50)            #Fondo de la pantalla en RGB
     _fps = 8
+    _screen_turn_size = (450, 50)
 
     # Rutas de las imágenes utilizadas para las clases Background, mark0 y markx.
     _background_image_path = "../Media/background_image.png"
@@ -51,6 +52,11 @@ class Configurations:
     def get_screen_size(cls)->tuple[int,int]:
         """Getter para _screen_size"""
         return cls._screen_size
+
+    @classmethod
+    def get_screen_turn_size(cls) -> tuple[int, int]:
+        """Getter para _screen_turn_size"""
+        return cls._screen_turn_size
 
     @classmethod
     def get_mark_size(cls) -> tuple[int, int]:
